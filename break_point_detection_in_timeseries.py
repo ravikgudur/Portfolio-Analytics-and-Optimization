@@ -451,36 +451,3 @@ if __name__ == "__main__":
 
 
 
-
-import matplotlib.pyplot as plt
-
-# Example precision and recall values
-precision = [0.8, 0.7, 0.6, 0.5, 0.4]
-recall = [1.0, 0.9, 0.8, 0.7, 0.6]
-
-# Calculate false positive rate (1 - precision)
-fpr = [1 - p for p in precision]
-
-# Plot ROC curve
-plt.plot(fpr, recall, marker='o')
-
-# Set labels and title
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate (Recall)')
-plt.title('ROC Curve')
-
-# Set axis limits
-plt.xlim([0, 1])
-plt.ylim([0, 1])
-
-# Add diagonal reference line
-plt.plot([0, 1], [0, 1], 'k--')
-
-# Show the plot
-plt.show()
-
-
-
-
-for i in original_segments:
-    for j in detected_segments:
